@@ -1,0 +1,36 @@
+type Nutrition {
+  calories: Int
+  fat: Int
+  carbs: Int
+  protein: Int
+}
+
+type Dessert {
+  _id: ID
+  dessert: String
+  nutritionInfo: Nutrition
+}
+
+input NutrutionInfoInput {
+  calories: Int
+  fat: Int
+  carbs: Int
+  protein: Int
+}
+
+input DessertInput {
+  dessert: String!
+  nutritionInfo: NutrutionInfoInput!
+}
+
+type Query {
+  "Return all desserts"
+  getDesserts: [Dessert]
+}
+
+type Mutation {
+  "Create new dessert"
+  createDessert(input: DessertInput!): Dessert
+  "Remove dessert"
+  removeDessert(_id: ID): String
+}
