@@ -215,3 +215,5 @@ dist
 
 #JetBrains
 .idea/
+
+.vercel

@@ -19,7 +19,7 @@
   "author": "Alejandro Cortez <acortez.dev@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zikeron/nutrition-backend/issues"
+    "url": "issues"
   },
   "homepage": "https://github.com/zikeron/nutrition-backend#readme",
   "dependencies": {
