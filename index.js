@@ -20,13 +20,6 @@ const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 app.use(cors());
 
-app.use("/", (req, res) => {
-  res.status(200).json({
-    status: "ok",
-    version: "1.0.0"
-  })
-});
-
 app.use(
   "/graphql",
   graphqlHTTP({
@@ -35,6 +28,13 @@ app.use(
     graphiql: true
   })
 );
+
+app.use("/", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    version: "1.0.0"
+  })
+});
 
 app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}/graphql`);
